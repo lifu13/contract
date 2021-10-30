@@ -17,11 +17,8 @@ object WindowsOperations_Test {
     val value2: DStream[(String, Int)] = value.flatMap(x => x.split(" ")).map(x => (x, 1))
     //val value1: DStream[(String, Int)] = value2.window(Seconds(12), Seconds(6))
     //val value3: DStream[(String, Int)] = value1.reduceByKey(_ + _)
-//    val value1: DStream[(String, Int)] = value2.reduceByKeyAndWindow((x:Int, y:Int) => x + y
-//      ,(x:Int, y:Int) => x - y
-//      , Seconds(12), Seconds(4)
-//    ).updateStateByKey((seq:Seq[Int],op:Option[Int])=>
-//      Some(seq.toList.sum+op.getOrElse(0)))
+  //多写一行试试范德萨富士达
+    //这是在github上操作的
     val value1: DStream[(String, Int)] = value2.reduceByWindow((x, y) => (x._1 + y._1, x._2 + y._2), Seconds(12), Seconds(4))
     value1.print()
     context.start()
