@@ -18,7 +18,7 @@ object WindowsOperations_Test {
     //val value1: DStream[(String, Int)] = value2.window(Seconds(12), Seconds(6))
     //val value3: DStream[(String, Int)] = value1.reduceByKey(_ + _)
   //多写一行试试范德萨富士达
-    //这是在github上操作的
+    //这是在github上操作的范德萨 发射点士大夫的撒法撒旦的撒发射点
     val value1: DStream[(String, Int)] = value2.reduceByWindow((x, y) => (x._1 + y._1, x._2 + y._2), Seconds(12), Seconds(4))
     value1.print()
     context.start()
