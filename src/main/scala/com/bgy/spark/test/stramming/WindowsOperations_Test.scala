@@ -22,7 +22,7 @@ object WindowsOperations_Test {  def main(args: Array[String]): Unit = {
     //xixi
     val value1: DStream[(String, Int)] = value2.reduceByWindow((x, y) => (x._1 + y._1, x._2 + y._2), Seconds(12), Seconds(4))
     value1.print()
-    value1.print()
+   
     context.start()
 
     context.awaitTermination()
