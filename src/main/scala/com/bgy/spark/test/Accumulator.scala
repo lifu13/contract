@@ -14,7 +14,7 @@ object Accumulator {
     val value: RDD[Int] = sc.makeRDD(Array(1, 2, 3, 4, 5, 6), 2)
     //3.创建RDD
     val dataRDD: RDD[(String, Int)] = sc.makeRDD(List(("a", 1), ("a", 2), ("a", 3), ("a", 4)))
-    ///fdsfafdsafsadf
+    ///dasdsadsdfsafsdaf aaaa
     //3.1 打印单词出现的次数（a,10） 代码执行了shuffle，效率比较低
     //dataRDD.reduceByKey(_ + _).collect().foreach(println)
     val sum1: LongAccumulator = sc.longAccumulator("sum")
