@@ -18,7 +18,7 @@ object WindowsOperations_Test {  def main(args: Array[String]): Unit = {
     //val value3: DStream[(String, Int)] = value1.reduceByKey(_ + _)
   //多写一行试试范德萨富士达fasd
     //这是在github上操作的范德萨 发射点士大夫的撒法撒旦的发射点vdsfsfsdafsadfasdf
-    //fdsafsadfsadfasdfasdjlfsajldf
+    //嘻嘻
     val value1: DStream[(String, Int)] = value2.reduceByWindow((x, y) => (x._1 + y._1, x._2 + y._2), Seconds(12), Seconds(4))
     value1.print()
     value1.print()
