@@ -19,7 +19,6 @@ object WindowsOperations_Test {  def main(args: Array[String]): Unit = {
   //多写一行试试范德萨富士达fasd
     //这是在github上操作的范德萨 发射点士大夫的撒法撒旦的发射点vdsfsfsdafsadfasdf
     //我在干什么
-    //xixi
     val value1: DStream[(String, Int)] = value2.reduceByWindow((x, y) => (x._1 + y._1, x._2 + y._2), Seconds(12), Seconds(4))
     value1.print()
    
